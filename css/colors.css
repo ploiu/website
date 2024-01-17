@@ -1,0 +1,13 @@
+html, body {
+    .theme-light {
+        /* TODO */
+        --theme-primary: black;
+        --theme-background: white;
+    }
+
+    .theme-dark {
+        /* TODO */
+    }
+
+    /* TODO other themes */
+}
