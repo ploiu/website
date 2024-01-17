@@ -1,14 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ploiu</title>
     <link rel="stylesheet" href="./css/index.css">
+    <style>
+        footer {
+            display: flex;
+            justify-content: center;
+            & .col {
+                margin-bottom: 0.5em;
+            }
+        }
+    </style>
 </head>
+
 <body class="theme-light">
-    <header>
+    <header class="container-fluid">
         <h1>Welcome to a Garbage Website</h1>
     </header>
+    <main>
+
+    </main>
+    <footer>
+        <div id="footerContents" class="row container">
+            <!-- copyright -->
+            <div class="col col-12 col-lg-4">
+                &copy; Ploiu
+                <span id="copyrightDate"></span>
+            </div>
+            <!-- github links -->
+            <div class="col col-12 col-lg-4">
+                <h6 class="footer-header">Github Links</h6>
+                <ul id="githubLinks" class="unstyled">
+                    <li><a href="https://github.com/ploiu/website">Source Code</a></li>
+                    <li><a href="https://github.com/ploiu">My Github</a></li>
+                </ul>
+            </div>
+            <!-- other links -->
+            <div class="col col-12 col-lg-4">
+                <ul class="unstyled">
+                    <li><button class="link">Libraries Used For This Site</button></li>
+                    <li><a href="/pages/login.html">Administrator Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- doc load scripts -->
+    <script>
+        const dateFormat = new Intl.DateTimeFormat('en-US', { year: 'numeric' });
+        document.querySelector('span#copyrightDate').innerText = dateFormat.format(new Date());
+    </script>
 </body>
+
 </html>

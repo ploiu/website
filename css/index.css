@@ -1,7 +1,41 @@
 @import "./reset.css";
 @import "./colors.css";
 @import "./text.css";
+@import "./bootstrap-grid.min.css";
+@import "./buttons.css";
+
+html, body {
+    height: 100%;
+}
+
+html {
+    overflow-y: hidden;
+}
 
 body {
     margin: 1em;
+}
+
+header, footer {
+    background-color: var(--theme-background-darker);
+    padding: 1em;
+}
+
+header {
+    margin-bottom: 1em;
+}
+
+footer {
+    margin-top: 1em;
+}
+
+ul.unstyled, ol.unstyled {
+    list-style-type: none;
+    & li {
+        margin: 0.25em 0;
+    }
+}
+
+.border-top {
+    border-top: 1px solid;
 }

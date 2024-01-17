@@ -34,3 +34,15 @@ h5 {
 h6 {
     font-size: 18px;
 }
+
+.footer-header {
+    font-size: 16px;
+    font-weight: normal;
+    border-bottom: 1px solid;
+    width: min-content;
+    white-space: nowrap;
+}
+
+a, .link {
+    color: var(--theme-link);
+}

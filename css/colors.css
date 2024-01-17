@@ -3,6 +3,8 @@ html, body {
         /* TODO */
         --theme-primary: black;
         --theme-background: white;
+        --theme-background-darker: #DCDCDC;
+        --theme-link: #0954c4;
     }
 
     .theme-dark {
