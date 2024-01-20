@@ -1,10 +1,10 @@
 html, body {
     .theme-light {
         /* TODO */
-        --theme-primary: black;
+        --theme-text-primary: black;
         --theme-background: white;
         --theme-background-darker: #DCDCDC;
-        --theme-link: #0954c4;
+        --theme-link: #0954C4;
     }
 
     .theme-dark {

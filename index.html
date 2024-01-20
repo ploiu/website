@@ -7,6 +7,11 @@
     <title>Ploiu</title>
     <link rel="stylesheet" href="./css/index.css">
     <style>
+        #softwareProjectList {
+            margin-top: 1em;
+            padding: 1em;
+        }
+
         footer {
             display: flex;
             justify-content: center;
@@ -22,7 +27,10 @@
         <h1>Welcome to a Garbage Website</h1>
     </header>
     <main>
-
+        <section id="softwareProjects">
+            <h2>Software Projects</h2>
+            <div id="softwareProjectList" class="row"></div>
+        </section>
     </main>
     <footer>
         <div id="footerContents" class="row container">
@@ -33,7 +41,6 @@
             </div>
             <!-- github links -->
             <div class="col col-12 col-lg-4">
-                <h6 class="footer-header">Github Links</h6>
                 <ul id="githubLinks" class="unstyled">
                     <li><a href="https://github.com/ploiu/website">Source Code</a></li>
                     <li><a href="https://github.com/ploiu">My Github</a></li>
@@ -52,6 +59,11 @@
     <script>
         const dateFormat = new Intl.DateTimeFormat('en-US', { year: 'numeric' });
         document.querySelector('span#copyrightDate').innerText = dateFormat.format(new Date());
+    </script>
+    <script type="module">
+        import {genCards} from "./js/cards.mjs";
+        const projectSection = document.querySelector('#softwareProjectList')
+        genCards('projects').forEach(it => projectSection.appendChild(it))
     </script>
 </body>
 

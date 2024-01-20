@@ -1,8 +1,13 @@
-@import "./reset.css";
-@import "./colors.css";
-@import "./text.css";
-@import "./bootstrap-grid.min.css";
-@import "./buttons.css";
+@import "/css/reset.css";
+@import "/css/colors.css";
+@import "/css/text.css";
+@import "/css/bootstrap-grid.min.css";
+@import "/css/buttons.css";
+
+/*variables not dependent on color scheme*/
+:root {
+    --border-radius: 2px;
+}
 
 html, body {
     height: 100%;
@@ -19,6 +24,7 @@ body {
 header, footer {
     background-color: var(--theme-background-darker);
     padding: 1em;
+    border-radius: var(--border-radius);
 }
 
 header {
@@ -38,4 +44,11 @@ ul.unstyled, ol.unstyled {
 
 .border-top {
     border-top: 1px solid;
+}
+
+hr {
+    height: 2px;
+    border-bottom: 1px solid;
+    border-color: var(--theme-background-darker);
+    margin: 0.5em 0;
 }

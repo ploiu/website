@@ -1,0 +1,11 @@
+{
+  "fmt": {
+    "exclude": [
+      "**/*.md"
+    ],
+    "singleQuote": true
+  },
+  "tasks": {
+    "check": "deno fmt; deno lint"
+  }
+}
