@@ -23,7 +23,7 @@ CardItem.prototype.toElement = function () {
   elem.description = this.description;
   elem.titleLink = this.titleLink;
   elem.imagePath = this.imagePath;
-  elem.classList.add('col-xs-12', 'col-lg-3');
+  elem.classList.add('col-xs-12', 'col-sm-6', 'col-lg-3');
   return elem;
 };
 

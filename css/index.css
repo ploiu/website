@@ -2,6 +2,7 @@
 @import "/css/colors.css";
 @import "/css/text.css";
 @import "/css/bootstrap-grid.min.css";
+@import "/css/components/Card.css";
 @import "/css/buttons.css";
 
 /*variables not dependent on color scheme*/
@@ -13,9 +14,6 @@ html, body {
     height: 100%;
 }
 
-html {
-    overflow-y: hidden;
-}
 
 body {
     margin: 1em;

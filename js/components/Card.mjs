@@ -4,7 +4,6 @@ const cardTemplate = document.querySelector('template#cardTemplate') ??
 cardTemplate.id = 'cardTemplate';
 //language=html
 cardTemplate.innerHTML = `
-    <link rel="stylesheet" href="../../css/components/Card.css">
     <article class="card">
         <img alt="card banner image" class="card-banner">
         <span class="card-title"></span>

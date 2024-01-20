@@ -1,6 +1,5 @@
 .card {
     min-width: 10vw;
-    max-width: 30vw;
     border: 1px solid var(--theme-text-primary);
     border-color: var(--theme-background-darker);
     border-radius: var(--border-radius);
