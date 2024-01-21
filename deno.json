@@ -3,7 +3,11 @@
     "exclude": [
       "**/*.md"
     ],
-    "singleQuote": true
+    "singleQuote": true,
+    "semiColons": true,
+    "useTabs": false,
+    "indentWidth": 2,
+    "lineWidth": 120
   },
   "tasks": {
     "check": "deno fmt; deno lint"

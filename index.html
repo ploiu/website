@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -20,11 +20,14 @@
             }
         }
     </style>
+    <!--icons because I can't design good ones to save my life-->
+    <script src="https://kit.fontawesome.com/96203dce8f.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="theme-light">
+<body>
     <header class="container-fluid">
         <h1>Welcome to a Garbage Website</h1>
+        <theme-chooser></theme-chooser>
     </header>
     <main>
         <section id="softwareProjects">
@@ -59,9 +62,17 @@
     <script>
         const dateFormat = new Intl.DateTimeFormat('en-US', { year: 'numeric' });
         document.querySelector('span#copyrightDate').innerText = dateFormat.format(new Date());
+        globalThis.setTheme = theme => {
+          document.querySelector('html').setAttribute('data-theme', theme)
+          localStorage.setItem('theme', theme);
+        }
+        const defaultTheme = localStorage.getItem('theme') ?? 'light';
+        setTheme(defaultTheme);
     </script>
+    <!--custom element stuff until it inevitably gets too large-->
     <script type="module">
         import {genCards} from "./js/cards.mjs";
+        import "./js/components/ThemeChooser.mjs";
         const projectSection = document.querySelector('#softwareProjectList')
         genCards('projects').forEach(it => projectSection.appendChild(it))
     </script>

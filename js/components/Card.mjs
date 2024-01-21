@@ -28,7 +28,7 @@ export class Card extends HTMLElement {
     super();
   }
 
-  onload() {
+  connectedCallback() {
     this.render();
   }
 

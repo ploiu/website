@@ -1,7 +1,8 @@
 .card {
     min-width: 10vw;
+    background-color: var(--theme-background);
     border: 1px solid var(--theme-text-primary);
-    border-color: var(--theme-background-darker);
+    border-color: var(--theme-accent);
     border-radius: var(--border-radius);
     min-height: 15vh;
     margin-bottom: 1em;

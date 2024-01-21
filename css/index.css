@@ -3,6 +3,7 @@
 @import "/css/text.css";
 @import "/css/bootstrap-grid.min.css";
 @import "/css/components/Card.css";
+@import "/css/components/ThemeChooser.css";
 @import "/css/buttons.css";
 
 /*variables not dependent on color scheme*/
@@ -12,6 +13,7 @@
 
 html, body {
     height: 100%;
+    background-color: var(--theme-background);
 }
 
 
@@ -20,13 +22,15 @@ body {
 }
 
 header, footer {
-    background-color: var(--theme-background-darker);
+    background-color: var(--theme-accent);
     padding: 1em;
     border-radius: var(--border-radius);
 }
 
 header {
     margin-bottom: 1em;
+    display: flex;
+    justify-content: space-between;
 }
 
 footer {
@@ -47,6 +51,6 @@ ul.unstyled, ol.unstyled {
 hr {
     height: 2px;
     border-bottom: 1px solid;
-    border-color: var(--theme-background-darker);
+    border-color: var(--theme-accent);
     margin: 0.5em 0;
 }

@@ -1,15 +1,29 @@
-html, body {
-    .theme-light {
-        /* TODO */
+* {
+    &[data-theme=light] {
         --theme-text-primary: black;
         --theme-background: white;
-        --theme-background-darker: #DCDCDC;
+        --theme-accent: #DCDCDC;
         --theme-link: #0954C4;
     }
 
-    .theme-dark {
-        /* TODO */
+    &[data-theme=dark] {
+        --theme-text-primary: #EFF1F3;
+        --theme-background: #071821;
+        --theme-accent: #009FB7;
+        --theme-link: #FED766;
     }
 
-    /* TODO other themes */
+    &[data-theme=gb-studio] {
+        --theme-text-primary: #E0F8CF;
+        --theme-background: #071821;
+        --theme-accent: #306850;
+        --theme-link: #86C06C;
+    }
+
+    &[data-theme=mewtwo] {
+        --theme-text-primary: #E3E4DB;
+        --theme-background: #071821;
+        --theme-accent: #AEA4BF;
+        --theme-link: #CDCDCD;
+    }
 }
