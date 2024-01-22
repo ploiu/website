@@ -21,9 +21,9 @@
     }
 
     &[data-theme=mewtwo] {
-        --theme-text-primary: #E3E4DB;
-        --theme-background: #071821;
-        --theme-accent: #AEA4BF;
-        --theme-link: #CDCDCD;
+        --theme-text-primary: #bdb6be;
+        --theme-background: #0c0612;
+        --theme-link: #AEA4BF;
+        --theme-accent: #997a96;
     }
 }
