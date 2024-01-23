@@ -63,7 +63,7 @@
         </div>
     </footer>
     <!-- doc load scripts -->
-    <script>
+    <script async>
         /* copyright date */
         const dateFormat = new Intl.DateTimeFormat('en-US', { year: 'numeric' });
         document.querySelector('span#copyrightDate').innerText = dateFormat.format(new Date());
@@ -76,15 +76,15 @@
         setTheme(defaultTheme);
     </script>
     <!--custom element stuff until it inevitably gets too large-->
-    <script type="module">
+    <script async type="module">
         import {genCards} from "./js/cards.mjs";
         import "./js/components/ThemeChooser.mjs";
         const projectSection = document.querySelector('#softwareProjectList')
         genCards('projects').forEach(it => projectSection.appendChild(it))
     </script>
-    <script src="js/cheats.js"></script>
+    <script async src="js/cheats.js"></script>
      <!--icons because I can't design good ones to save my life-->
-     <script src="https://kit.fontawesome.com/96203dce8f.js" crossorigin="anonymous"></script>
+     <script async src="https://kit.fontawesome.com/96203dce8f.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
