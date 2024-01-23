@@ -1,0 +1,4 @@
+exclude:
+  - deno.json
+  - .gitignore
+  - libraries-used.md
