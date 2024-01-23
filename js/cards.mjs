@@ -30,6 +30,7 @@ CardItem.prototype.toElement = function () {
 /** @typedef {{string: CardItem[]}} */
 const cards = {
   projects: [
+    new CardItem('Website', 'You are here.', 'https://github.com/ploiu/website'),
     new CardItem(
       'File_Server',
       "A self-hostable file backup server designed to be run on your local network on a raspberry pi. My first project written in Rust, so I'm pretty proud of it.",

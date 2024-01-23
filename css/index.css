@@ -16,6 +16,12 @@ html, body {
     background-color: var(--theme-background);
 }
 
+html {
+    &.konami-code {
+        /* filter: invert(); */
+        transform: rotate(180deg);
+    }
+}
 
 body {
     margin: 1em;

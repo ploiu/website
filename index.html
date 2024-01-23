@@ -20,8 +20,6 @@
             }
         }
     </style>
-    <!--icons because I can't design good ones to save my life-->
-    <script src="https://kit.fontawesome.com/96203dce8f.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -34,6 +32,12 @@
             <h2>Software Projects</h2>
             <div id="softwareProjectList" class="row"></div>
         </section>
+        <!-- <section id="otherProjects">
+            <h2>Other Projects</h2>
+            <div id="otherProjectList" class="row">
+                TODO
+            </div>
+        </section> -->
     </main>
     <footer>
         <div id="footerContents" class="row container">
@@ -60,13 +64,15 @@
     </footer>
     <!-- doc load scripts -->
     <script>
+        /* copyright date */
         const dateFormat = new Intl.DateTimeFormat('en-US', { year: 'numeric' });
         document.querySelector('span#copyrightDate').innerText = dateFormat.format(new Date());
+        /* theme selection */
         globalThis.setTheme = theme => {
           document.querySelector('html').setAttribute('data-theme', theme)
           localStorage.setItem('theme', theme);
         }
-        const defaultTheme = localStorage.getItem('theme') ?? 'light';
+        const defaultTheme = localStorage.getItem('theme') ?? 'dark';
         setTheme(defaultTheme);
     </script>
     <!--custom element stuff until it inevitably gets too large-->
@@ -76,6 +82,9 @@
         const projectSection = document.querySelector('#softwareProjectList')
         genCards('projects').forEach(it => projectSection.appendChild(it))
     </script>
+    <script src="js/cheats.js"></script>
+     <!--icons because I can't design good ones to save my life-->
+     <script src="https://kit.fontawesome.com/96203dce8f.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
