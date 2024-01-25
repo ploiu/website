@@ -30,7 +30,5 @@ document.querySelector('html').addEventListener('keyup', (e) => {
         action.apply();
       }
     }
-    // reset to prevent from triggering repeatedly
-    enteredKeys.fill(undefined);
   }
 });
