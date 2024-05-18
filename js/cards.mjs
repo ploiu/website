@@ -67,7 +67,7 @@ const cards = {
       'https://github.com/ploiu/pythonPong',
     ),
     new CardItem(
-      'arg-helper',
+      'Arg-Helper',
       'A javascript library for Deno that validates args passed to simple scripts',
       'https://jsr.io/@ploiu/arg-helper'
     )
