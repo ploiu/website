@@ -1,4 +1,4 @@
-const enteredKeys = new Array(11);
+const enteredKeys = new Array(10);
 enteredKeys.fill(undefined);
 // TODO this doesn't work on mobile browsers
 const validCodes = {
@@ -14,12 +14,11 @@ const validCodes = {
       'ArrowRight',
       'b',
       'a',
-      'Enter',
     ]
   ]: () => document.querySelector('html').classList.add('konami-code'),
 };
 document.querySelector('html').addEventListener('keyup', (e) => {
-  if (enteredKeys.length == 11) {
+  if (enteredKeys.length === 10) {
     enteredKeys.shift();
   }
   enteredKeys.push(e.key);

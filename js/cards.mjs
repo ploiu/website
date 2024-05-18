@@ -66,6 +66,11 @@ const cards = {
       'A fun game in python based on pong, but with power ups. Uses SNES controller mappings',
       'https://github.com/ploiu/pythonPong',
     ),
+    new CardItem(
+      'arg-helper',
+      'A javascript library for Deno that validates args passed to simple scripts',
+      'https://jsr.io/@ploiu/arg-helper'
+    )
   ],
 };
 
