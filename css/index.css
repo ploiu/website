@@ -1,62 +1,58 @@
-@import "/css/reset.css";
-@import "/css/colors.css";
-@import "/css/text.css";
-@import "/css/bootstrap-grid.min.css";
-@import "/css/components/Card.css";
-@import "/css/components/ThemeChooser.css";
-@import "/css/buttons.css";
+@import '/css/reset.css';
+@import '/css/colors.css';
+@import '/css/text.css';
+@import '/css/simple-grid.css';
+@import '/css/components/Card.css';
+@import '/css/components/ThemeChooser.css';
+@import '/css/buttons.css';
 
 /*variables not dependent on color scheme*/
 :root {
-    --border-radius: 2px;
+  --border-radius: 2px;
 }
 
 html, body {
-    height: 100%;
-    background-color: var(--theme-background);
+  height: 100%;
+  background-color: var(--theme-background);
 }
 
 html {
-    &.konami-code {
-        /* filter: invert(); */
-        transform: rotate(180deg);
-    }
-}
-
-body {
-    margin: 1em;
+  &.konami-code {
+    /* filter: invert(); */
+    transform: rotate(180deg);
+  }
 }
 
 header, footer {
-    background-color: var(--theme-accent);
-    padding: 1em;
-    border-radius: var(--border-radius);
+  background-color: var(--theme-accent);
+  padding: 1em;
+  border-radius: var(--border-radius);
 }
 
 header {
-    margin-bottom: 1em;
-    display: flex;
-    justify-content: space-between;
+  margin-bottom: 1em;
+  display: flex;
+  justify-content: space-between;
 }
 
 footer {
-    margin-top: 1em;
+  margin-top: 1em;
 }
 
 ul.unstyled, ol.unstyled {
-    list-style-type: none;
-    & li {
-        margin: 0.25em 0;
-    }
+  list-style-type: none;
+  & li {
+    margin: 0.25em 0;
+  }
 }
 
 .border-top {
-    border-top: 1px solid;
+  border-top: 1px solid;
 }
 
 hr {
-    height: 2px;
-    border-bottom: 1px solid;
-    border-color: var(--theme-accent);
-    margin: 0.5em 0;
+  height: 2px;
+  border-bottom: 1px solid;
+  border-color: var(--theme-accent);
+  margin: 0.5em 0;
 }

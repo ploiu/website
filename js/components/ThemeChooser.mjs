@@ -16,10 +16,10 @@ swatchTemplate.id = 'swatchTemplate';
 //language=html
 swatchTemplate.innerHTML = `
     <div class="swatch row">
-        <div class="col-xs-6 col-sm-3" style="background-color: var(--theme-background)"></div>
-        <div class="col-xs-6 col-sm-3" style="background-color: var(--theme-text-primary)"></div>
-        <div class="col-xs-6 col-sm-3" style="background-color: var(--theme-accent)"></div>
-        <div class="col-xs-6 col-sm-3" style="background-color: var(--theme-link)"></div>
+        <div class="col-3-sm" style="background-color: var(--theme-background)"></div>
+        <div class="col-3-sm" style="background-color: var(--theme-text-primary)"></div>
+        <div class="col-3-sm" style="background-color: var(--theme-accent)"></div>
+        <div class="col-3-sm" style="background-color: var(--theme-link)"></div>
     </div>
 `;
 

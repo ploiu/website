@@ -1,6 +1,7 @@
-const enteredKeys = new Array(11);
+const enteredKeys = new Array(10);
 enteredKeys.fill(undefined);
-// TODO this doesn't work on mobile browsers
+// TODO this doesn't work on mobile browsers...maybe I should have something else that works on mobile?
+//  like using the accelerometer once it's stable?
 const validCodes = {
   [
     [
@@ -14,12 +15,11 @@ const validCodes = {
       'ArrowRight',
       'b',
       'a',
-      'Enter',
     ]
   ]: () => document.querySelector('html').classList.add('konami-code'),
 };
 document.querySelector('html').addEventListener('keyup', (e) => {
-  if (enteredKeys.length == 11) {
+  if (enteredKeys.length == 10) {
     enteredKeys.shift();
   }
   enteredKeys.push(e.key);

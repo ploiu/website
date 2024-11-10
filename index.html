@@ -1,90 +1,65 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ploiu</title>
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/index.css" />
+    <script async type="module" src="./js/components/Footer.mjs"></script>
     <style>
-        #softwareProjectList {
-            margin-top: 1em;
-            padding: 1em;
-        }
+      #softwareProjectList {
+        margin-top: 1em;
+        padding: 1em;
+        /* prevent large layout shifts by having a minimum height */
+        min-height: 20vh;
+      }
 
-        footer {
-            display: flex;
-            justify-content: center;
-            & .col {
-                margin-bottom: 0.5em;
-            }
+      footer {
+        display: flex;
+        justify-content: center;
+        & .col {
+          margin-bottom: 0.5em;
         }
+      }
     </style>
-</head>
+  </head>
 
-<body>
-    <header class="container-fluid">
-        <h1>Welcome to a Garbage Website</h1>
-        <theme-chooser></theme-chooser>
+  <body>
+    <header>
+      <h1>Welcome to a Garbage Website</h1>
+      <theme-chooser></theme-chooser>
     </header>
     <main>
-        <section id="softwareProjects">
-            <h2>Software Projects</h2>
-            <div id="softwareProjectList" class="row"></div>
-        </section>
-        <!-- <section id="otherProjects">
+      <section id="softwareProjects" class="">
+        <h2>Software Projects</h2>
+        <div id="softwareProjectList" class="row"></div>
+      </section>
+      <!-- <section id="otherProjects">
             <h2>Other Projects</h2>
             <div id="otherProjectList" class="row">
                 TODO
             </div>
         </section> -->
     </main>
-    <footer>
-        <div id="footerContents" class="row container">
-            <!-- copyright -->
-            <div class="col col-12 col-lg-4">
-                &copy; Ploiu
-                <span id="copyrightDate"></span>
-            </div>
-            <!-- github links -->
-            <div class="col col-12 col-lg-4">
-                <ul id="githubLinks" class="unstyled">
-                    <li><a href="https://github.com/ploiu/website">Source Code</a></li>
-                    <li><a href="https://github.com/ploiu">My Github</a></li>
-                </ul>
-            </div>
-            <!-- other links -->
-            <div class="col col-12 col-lg-4">
-                <ul class="unstyled">
-                    <li><button class="link">Libraries Used For This Site</button></li>
-                    <li><a href="/pages/login.html">Administrator Login</a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
+    <footer-element></footer-element>
     <!-- doc load scripts -->
     <script async>
-        /* copyright date */
-        const dateFormat = new Intl.DateTimeFormat('en-US', { year: 'numeric' });
-        document.querySelector('span#copyrightDate').innerText = dateFormat.format(new Date());
-        /* theme selection */
-        globalThis.setTheme = theme => {
-          document.querySelector('html').setAttribute('data-theme', theme)
-          localStorage.setItem('theme', theme);
-        }
-        const defaultTheme = localStorage.getItem('theme') ?? 'dark';
-        setTheme(defaultTheme);
+      /* theme selection */
+      globalThis.setTheme = (theme) => {
+        document.querySelector('html').setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+      };
+      const defaultTheme = localStorage.getItem('theme') ?? 'dark';
+      setTheme(defaultTheme);
     </script>
     <!--custom element stuff until it inevitably gets too large-->
     <script async type="module">
-        import {genCards} from "./js/cards.mjs";
-        import "./js/components/ThemeChooser.mjs";
-        const projectSection = document.querySelector('#softwareProjectList')
-        genCards('projects').forEach(it => projectSection.appendChild(it))
+      import { genCards } from './js/cards.mjs';
+      const projectSection = document.querySelector('#softwareProjectList');
+      genCards('projects').forEach((it) => projectSection.appendChild(it));
     </script>
     <script async src="js/cheats.js"></script>
-     <!--icons because I can't design good ones to save my life-->
-     <script async src="https://kit.fontawesome.com/96203dce8f.js" crossorigin="anonymous"></script>
-</body>
-
+    <!--icons because I can't design good ones to save my life-->
+    <script async src="https://kit.fontawesome.com/96203dce8f.js" crossorigin="anonymous"></script>
+  </body>
 </html>

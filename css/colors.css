@@ -1,29 +1,29 @@
 * {
-    &[data-theme=light] {
-        --theme-text-primary: black;
-        --theme-background: white;
-        --theme-accent: #DCDCDC;
-        --theme-link: #0954C4;
-    }
+  &[data-theme='light'] {
+    --theme-text-primary: black;
+    --theme-background: white;
+    --theme-accent: #dcdcdc;
+    --theme-link: #0954c4;
+  }
 
-    &[data-theme=dark] {
-        --theme-text-primary: #EFF1F3;
-        --theme-background: #071821;
-        --theme-accent: #009FB7;
-        --theme-link: #FED766;
-    }
+  &[data-theme='dark'] {
+    --theme-text-primary: #eff1f3;
+    --theme-background: #071821;
+    --theme-accent: #009fb7;
+    --theme-link: #fed766;
+  }
 
-    &[data-theme=gb-studio] {
-        --theme-text-primary: #E0F8CF;
-        --theme-background: #071821;
-        --theme-accent: #306850;
-        --theme-link: #86C06C;
-    }
+  &[data-theme='gb-studio'] {
+    --theme-text-primary: #e0f8cf;
+    --theme-background: #071821;
+    --theme-accent: #306850;
+    --theme-link: #86c06c;
+  }
 
-    &[data-theme=mewtwo] {
-        --theme-text-primary: #bdb6be;
-        --theme-background: #0c0612;
-        --theme-link: #AEA4BF;
-        --theme-accent: #997a96;
-    }
+  &[data-theme='mewtwo'] {
+    --theme-text-primary: #bdb6be;
+    --theme-background: #0c0612;
+    --theme-link: #aea4bf;
+    --theme-accent: #997a96;
+  }
 }
