@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="dns-prefetch" href="https://kit.fontawesome.com" />
     <title>Ploiu</title>
     <link rel="stylesheet" href="./css/index.css" />
     <script async type="module" src="./js/components/Footer.mjs"></script>
@@ -45,8 +44,6 @@
     <footer-element></footer-element>
     <!-- doc load scripts -->
     <script async type="module" src="/js/components/ThemeChooser.mjs"></script>
-    <!-- without this, the browser will try and load fontawesome first even though it's at the bottom of the screen. That's AWFUL for performance -->
-    <script async type="module" src="/js/cards.mjs"></script>
     <script async>
       /* theme selection */
       globalThis.setTheme = (theme) => {
@@ -63,7 +60,5 @@
       genCards('projects').forEach((it) => projectSection.appendChild(it));
     </script>
     <script async src="js/cheats.js"></script>
-    <!--icons because I can't design good ones to save my life-->
-    <script src="https://kit.fontawesome.com/96203dce8f.js" crossorigin="anonymous"></script>
   </body>
 </html>
