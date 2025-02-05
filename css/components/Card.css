@@ -10,5 +10,6 @@
 
   & .card-title {
     font-size: x-large;
+    text-decoration: underline;
   }
 }
