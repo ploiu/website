@@ -2,3 +2,4 @@ exclude:
   - deno.json
   - .gitignore
   - libraries-used.md
+  - deno.lock
